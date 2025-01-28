@@ -3,8 +3,8 @@ package tech.konata.phosphate.example.module;
 import org.lwjgl.opengl.GL11;
 import tech.konata.phosphate.api.Extension;
 import tech.konata.phosphate.api.PApi;
-import tech.konata.phosphate.api.enums.EnumCategory;
 import tech.konata.phosphate.api.features.ExtensionModule;
+import tech.konata.phosphate.api.interfaces.ICategory;
 import tech.konata.phosphate.api.interfaces.rendering.FontManager;
 import tech.konata.phosphate.api.interfaces.settings.BooleanSetting;
 import tech.konata.phosphate.api.interfaces.settings.EnumSetting;
@@ -24,7 +24,7 @@ public class ExampleModule extends ExtensionModule {
     ModeSetting stringModeSetting = Extension.getAPI().createModeSetting("String Setting", "1", "1", "2", "3");
 
     public ExampleModule() {
-        super("Example Module", "Test Module.", EnumCategory.OTHER);
+        super("Example Module", "Test Module.", ICategory.Misc);
         super.addSettings(this.bool, this.number, this.enumSetting, this.stringModeSetting);
     }
 
